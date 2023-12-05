@@ -1,0 +1,201 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mogra;
+}
+
+/* Setting body and html dimensions, hiding overflow */
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Styling the blank page container */
+.blank_page {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./../../images/Leonardo_Diffusion_XL_kitchen_background_in_foucus_with_table_0.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Creating a blurred overlay on the blank page */
+.blank_page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+/* Styling the main working area */
+.working_area {
+    z-index: 1;
+    width: 95%;
+    height: 95%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling the header section */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Styling images inside the header */
+header img {
+    width: 100px;
+    border-radius: 20px;
+}
+
+/* Styling the heading in the working area */
+.working_area h1 {
+    font-size: 100px;
+}
+
+/* Styling the main content area */
+main {
+    width: 100%;
+    height: 95%;
+    display: flex;
+}
+
+/* Styling the left section of the main content */
+.main_left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling the recipe name */
+.recipe_name {
+    font-size: 60px;
+}
+
+/* Styling the top section in the left area */
+.main_left_top {
+    height: 100%;
+}
+.live_recipe_img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+/* Styling the bottom section in the left area */
+.main_left_bottom {
+    height: 100%;
+}
+
+/* Styling headings in the bottom section of the left area */
+.main_left_bottom h3 {
+    font-size: 40px;
+}
+
+/* Styling the ingredients section */
+.ingrediants {
+    width: 100%;
+    height: 85%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.497);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+   height: 20px;
+   position: relative;
+}
+
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f106; /* Optional: Set background color for the track */
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: burlywood;
+}
+::-webkit-scrollbar-thumb:hover{
+    cursor: pointer;
+}
+
+
+/* Styling the individual ingredient */
+.ingrediant {
+    width: 185px;
+    height: 185px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+/* Styling the heading inside the ingredient */
+.ingrediant h4 {
+    font-size: 25px;
+}
+
+/* Styling the ingredient image */
+.ingrediant_img {
+    width: 100%;
+    height: 70%;
+}
+
+/* Styling the right section of the main content */
+.main_right {
+    width: 60%;
+    position: relative;
+}
+
+/* Styling the instruction container */
+.instruction {
+    background-color: rgba(243, 235, 235, 0.384);
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 0 15px;
+    overflow: auto;
+}
+
+/* Styling the heading inside the instruction container */
+.instruciton_heading {
+    position: sticky;
+    top: 0;
+    color: white;
+    font-size: 50px;
+}
+
+/* live instructions */
+.live_instruction{
+    text-align: left;
+    font-size: 25px;
+}
