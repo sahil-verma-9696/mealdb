@@ -81,7 +81,8 @@ const injectingDOM = (meals) => {
     }
 }
 const getRecipe = async (meal) => {
-    const raw = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771`);
+    console.log(meal);
+    const raw = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal}`);
     const data = await raw.json();
     console.log(data);
     console.log(data.meals[0])
@@ -93,5 +94,4 @@ const queries = () => {
     const q = urlParams.get('q');
     getRecipe(q);
 }
-
 queries();

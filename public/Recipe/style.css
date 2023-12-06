@@ -90,11 +90,13 @@ main {
 .main_left_top {
     height: 100%;
 }
-.live_recipe_img{
+
+.live_recipe_img {
     width: 300px;
     height: 300px;
     border-radius: 20px;
 }
+
 /* Styling the bottom section in the left area */
 .main_left_bottom {
     height: 100%;
@@ -116,21 +118,21 @@ main {
     align-items: center;
     gap: 5px;
     overflow-x: auto;
-    scrollbar-width: thin;
     white-space: nowrap;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 /* Styling the scrollbar */
 ::-webkit-scrollbar {
-   height: 20px;
-   position: relative;
+    height: 20px;
+    position: relative;
 }
 
 
 /* Styling the scrollbar track */
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f106; /* Optional: Set background color for the track */
+    background-color: #f1f1f106;
+    /* Optional: Set background color for the track */
 }
 
 /* Styling the scrollbar thumb */
@@ -138,7 +140,8 @@ main {
     border-radius: 20px;
     background-color: burlywood;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
 }
 
@@ -195,7 +198,7 @@ main {
 }
 
 /* live instructions */
-.live_instruction{
+.live_instruction {
     text-align: left;
     font-size: 25px;
 }
