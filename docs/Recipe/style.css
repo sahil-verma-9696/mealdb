@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Mogra;
+    color: white;
+    text-shadow: 0 0 15px black;
 }
 
 /* Setting body and html dimensions, hiding overflow */
@@ -84,6 +86,7 @@ main {
 /* Styling the recipe name */
 .recipe_name {
     font-size: 60px;
+    text-shadow: 0 0 15px black;
 }
 
 /* Styling the top section in the left area */
@@ -105,6 +108,7 @@ main {
 /* Styling headings in the bottom section of the left area */
 .main_left_bottom h3 {
     font-size: 40px;
+    text-shadow: 0 0 5px black;
 }
 
 /* Styling the ingredients section */
@@ -138,7 +142,7 @@ main {
 /* Styling the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     border-radius: 20px;
-    background-color: burlywood;
+    background-color: white;
 }
 
 ::-webkit-scrollbar-thumb:hover {

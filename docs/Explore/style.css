@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
+    font-family: Mogra;
     font-weight: 700;
     text-decoration: none;
-    /* color: white; */
+    color: white;
 }
 
 html,
@@ -17,153 +17,122 @@ body {
 
 .blank_page {
     width: 100%;
-    height: 100%;
-}
-
-.workingArea {
-    width: 95%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.layer_1 {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-image: url("./../../images/Leonardo_Diffusion_XL_different_country_foods_with_there_flags_1.jpg");
     position: relative;
+    display: flex;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    margin-top: 5px;
-    box-shadow: 0 0 15px black;
-    border-radius: 15px;
-    position: sticky;
-    top: 10px;
+.blank_page::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.working_area {
+    margin: auto;
+    width: 90%;
     z-index: 1;
 }
 
-.nav_left .logo {
-    font-size: 50px;
-    margin: 10px;
-    text-shadow: 5px 6px 5px yellow;
-    -webkit-text-stroke: 1px rgb(196, 196, 196);
-}
-
-.nav_center input {
-    color: gray;
-    font-size: 25px;
-    padding-left: 20px;
-    padding: 10px;
-    outline: none;
-    border: none;
-    background-color: rgb(255, 255, 250);
-    box-shadow: 0 0 15px yellow;
-    border-radius: 15px;
-}
-
-.nav_right a {
-    margin-right: 25px;
-    font-size: 2em;
-    text-shadow: 0 0 5px gray;
-    text-transform: uppercase;
-    -webkit-text-stroke: 1px rgb(196, 196, 196);
-}
-
-main {
-   width: 100%;
-}
-
-.hero {
+.top {
     width: 100%;
-    height: 100%;
-}
-
-.hero-section {
-    width: 100%;
-    height: 330px;
-    margin-top: 20px;
-    background-color: green;
-    position: relative;
-}
-
-.hero-elem{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 100px;
-}
-.hero-elem:nth-child(1){
-    background-color: red;
-    left: 0px;
-}
-.hero-elem:nth-child(2){
-    background-color: blue;
-    left: 0px;
-}
-.hero-elem:nth-child(3){
-    background-color: yellow;
-    left: 0px;
-}
-
-.categories {
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.heading2 {
-    font-family: 'Courgette', cursive;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-.categories .cards {
-    background-color: rgba(252, 252, 252, 0.436);
-    box-shadow: 0 0 15px yellow;
-    border-radius: 15px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cards div {
-    border-radius: 15px;
-}
-
-.categories .card-left {
-    background-color: transparent;
-    display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.categories .card-right {
-    background-color: yellow;
+.top img {
+    width: 200px;
+}
+
+.top h1 {
+    font-size: 90px;
+    font-family: kavoon;
+    color: #f60606;
+    text-shadow: 0 0 5px black;
+}
+
+.bottom {
+    background-color: rgba(255, 255, 255, 0.555);
+    border-radius: 20px;
+}
+
+.nav {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+.nav button {
+    width: 100px;
+    margin: 10px;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    border: none;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    height: 570px;
+    margin: auto;
+    margin-top: 10px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.left_meal {
+    align-items: left;
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.right_meal {
+    align-items: right;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    align-items: center;
 }
 
-.card-right p {
-    text-align: right;
-}
-
-.card-right h2 {
-    text-align: right;
-}
-
-.titles {
-    font-family: 'Courgette', cursive;
-    font-size: 50px;
-}
-
-.live_img{
-    width: 200px;
+.left_meal img {
+    width: 150px;
     border-radius: 20px;
+}
+
+.right_meal img {
+    width: 150px;
+    border-radius: 20px;
+}
+
+h2{
+    margin: 20px;
 }

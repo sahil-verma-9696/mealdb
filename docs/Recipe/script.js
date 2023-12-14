@@ -3,6 +3,7 @@ const horizontalScroll = (event) => {
     container.scrollLeft += event.deltaY;
     event.preventDefault();
 }
+
 const creatingIngrediantDOM = (ing_url, ing_name, ing_qnt) => {
 
     const ingrediants = document.querySelector('.ingrediants');
@@ -12,7 +13,7 @@ const creatingIngrediantDOM = (ing_url, ing_name, ing_qnt) => {
 
     const ingrediant_img = document.createElement("img");
     ingrediant_img.className = "ingrediant_img";
-    ingrediant_img.alt = "ingredent img not found"
+    ingrediant_img.alt = "ingredent img not found";
     console.log(ing_url);
     ingrediant_img.src = `https://www.themealdb.com/images/ingredients/${ing_url}.png`
 
@@ -82,7 +83,7 @@ const injectingDOM = (meals) => {
 }
 const getRecipe = async (meal) => {
     console.log(meal);
-    const raw = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal}`);
+    const raw = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${52865}`);
     const data = await raw.json();
     console.log(data);
     console.log(data.meals[0])
